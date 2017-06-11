@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- Declares meanMapApp as the starting Angular module -->
+<html class="no-js" ng-app="meanMapApp">
+<head>
+    <meta charset="utf-8">
+    <title>Devs Around the World</title>
+    <meta name="description" content="An example demonstrating Google Map integration with MEAN Apps">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmJY41wg57i463GU022fBVx4V-dz-hYIM"></script>
+    <!-- Modernizr -->
+    <!-- <script src="../bower_components/modernizr/bin/modernizr"></script> -->
+    <!-- JS Source -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li active><a href="#!/join">Join the Team</a></li>
+            <li disabled><a href="#!/find">Find Teammates</a></li>
+        </ul>
+        <h3 class="text-muted">Devs Around the World</h3>
+    </div>
+    <div class="row content">
+        <!-- Google Map -->
+        <div class="col-md-7">
+            <div id="map" style="width:645px; height:645px"></div>
+        </div>
+        <!-- Side Panel -- Now Handled by ng-view -->
+        <div ng-view></div>
+
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <p class="text-center"><span class="glyphicon glyphicon-check"></span> Created by Kyle Barlow -
+            <a href="mailto:kbarlowjs@gmail.com">Email Kyle</a> | <a href="https://github.com/kbazl3" target="_blank">Github Repo</a></p>
+    </div>
+
+    <script src="./js/app.js" charset="utf-8"></script>
+    <script src="./js/addCtrl.js" charset="utf-8"></script>
+    <script src="./js/gservice.js" charset="utf-8"></script>
+    <script src="./js/queryCtrl.js" charset="utf-8"></script>
+</div>
+</body>
+</html>
